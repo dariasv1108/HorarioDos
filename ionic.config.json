@@ -1,0 +1,7 @@
+{
+  "name": "HorarioDos",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
