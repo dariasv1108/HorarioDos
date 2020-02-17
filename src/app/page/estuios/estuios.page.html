@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Nivel Academico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-item *ngFor="let item of estudios let indice=index"  (click)=grupo(item.idEstudios) class="ion-text-center">
+    <ion-label>{{item.nombre}}</ion-label>
+  </ion-item>
+</ion-content>

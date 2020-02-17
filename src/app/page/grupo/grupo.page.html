@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar style="display: inline-block;">
+    <ion-button routerLink='/home'>
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+    </ion-button>
+    <ion-title >
+      <h1>Grupo</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let item of _grupo let indice=index"  (click)=horario(item.idGrupo) class="ion-text-center">
+    <ion-label>{{item.nombre}}</ion-label>
+  </ion-item>
+</ion-content>

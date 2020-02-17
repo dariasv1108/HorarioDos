@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Horario</ion-title>
+    <ion-button routerLink='/grupo'>
+      <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size=2>Horario</ion-col>
+      <ion-col size=2 *ngFor="let item of dia; let b = index" style="background-color: blueviolet;">{{item|dias}}</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of hora; let i = index">
+      <ion-col size=2>{{hora[i]|horas}}</ion-col>
+      <ion-col size=2 *ngFor="let itemDos of horario.cuadrante[i]; let a = index" style="background-color: cyan;" >
+        <ion-label *ngFor="let itemTres of horario.cuadrante[i][a]; let e = index" (click)="presentToast(horario.cuadrante[i][a])">{{itemTres.nombre}}<br></ion-label> 
+        <!-- *ngFor="let itemTres of horario.cuadrante[i][a]; let e = index" -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

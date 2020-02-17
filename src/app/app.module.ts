@@ -1,3 +1,5 @@
+import { SqliteDbCopy } from '@ionic-native/sqlite-db-copy/ngx';
+import { SQLite } from '@ionic-native/sqlite/ngx';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -16,6 +18,8 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    SQLite,
+    SqliteDbCopy,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
